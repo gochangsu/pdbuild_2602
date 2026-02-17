@@ -40,12 +40,36 @@ body {
     margin-bottom: 2rem;
 }
 
+.app-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: center;
+}
+
+.app-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #1f2937;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-nav a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.08);
+}
+
 .lotto-card {
     background-color: var(--card-background);
     padding: 2.5rem;
     border-radius: 16px;
     box-shadow: 0 10px 20px var(--shadow-color), 0 6px 6px var(--shadow-color);
     transition: transform 0.3s ease;
+    text-align: left;
 }
 
 .lotto-card:hover {
@@ -81,6 +105,18 @@ body {
 .bonus-number {
     display: flex;
     align-items: center;
+}
+
+.section-title {
+    margin: 0 0 1rem;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.section-note {
+    margin-top: 1rem;
+    color: #6b7280;
+    font-size: 0.95rem;
 }
 
 .number-circle {
@@ -134,6 +170,36 @@ body {
 .generate-button:active {
     transform: translateY(-1px);
     box-shadow: 0 4px 10px var(--glow-color);
+}
+
+.info-card {
+    margin-top: 2rem;
+    background-color: var(--card-background);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px var(--shadow-color), 0 6px 6px var(--shadow-color);
+    text-align: left;
+}
+
+.info-list {
+    margin: 1rem 0 0;
+    padding-left: 1.1rem;
+    color: #374151;
+}
+
+.faq-item {
+    margin-bottom: 1.2rem;
+}
+
+.faq-item h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+    color: #111827;
+}
+
+.faq-item p {
+    margin: 0;
+    color: #4b5563;
 }
 
 .partner-card {
@@ -230,6 +296,10 @@ body {
 
     .generate-button {
         padding: 0.8rem 2rem;
+    }
+
+    .info-card {
+        padding: 2rem;
     }
 
     .partner-card {
