@@ -136,91 +136,6 @@ body {
     box-shadow: 0 4px 10px var(--glow-color);
 }
 
-.leaf-card {
-    margin-top: 2rem;
-    background-color: var(--card-background);
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 20px var(--shadow-color), 0 6px 6px var(--shadow-color);
-}
-
-.leaf-title {
-    margin: 0 0 0.5rem;
-    font-size: 1.6rem;
-    color: var(--primary-color);
-}
-
-.leaf-description {
-    margin: 0 0 1.5rem;
-    color: #666;
-}
-
-.leaf-tools {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.5rem;
-    align-items: start;
-}
-
-.leaf-webcam {
-    display: grid;
-    gap: 1rem;
-    justify-items: center;
-}
-
-.webcam-frame {
-    width: 240px;
-    height: 240px;
-    border-radius: 16px;
-    background: #111827;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.1);
-}
-
-.leaf-results {
-    display: grid;
-    gap: 0.75rem;
-}
-
-.leaf-status {
-    font-weight: 600;
-    color: #111827;
-}
-
-.label-row {
-    padding: 0.6rem 0.8rem;
-    border-radius: 10px;
-    background: #f3f5f9;
-    color: #1f2937;
-    font-size: 0.95rem;
-}
-
-.analyze-button {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #fff;
-    background-color: var(--primary-color);
-    border: none;
-    padding: 0.75rem 1.6rem;
-    border-radius: 999px;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
-    box-shadow: 0 6px 16px rgba(74, 144, 226, 0.35);
-}
-
-.analyze-button:disabled {
-    opacity: 0.6;
-    cursor: not-allowed;
-    box-shadow: none;
-}
-
-.analyze-button:hover:not(:disabled) {
-    transform: translateY(-2px);
-}
-
 .partner-card {
     margin-top: 2rem;
     background-color: var(--card-background);
@@ -315,15 +230,6 @@ body {
 
     .generate-button {
         padding: 0.8rem 2rem;
-    }
-
-    .leaf-card {
-        padding: 2rem;
-    }
-
-    .webcam-frame {
-        width: 200px;
-        height: 200px;
     }
 
     .partner-card {
