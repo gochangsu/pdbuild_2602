@@ -136,6 +136,79 @@ body {
     box-shadow: 0 4px 10px var(--glow-color);
 }
 
+.partner-card {
+    margin-top: 2rem;
+    background-color: var(--card-background);
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px var(--shadow-color), 0 6px 6px var(--shadow-color);
+    text-align: left;
+}
+
+.partner-title {
+    margin: 0 0 0.5rem;
+    font-size: 1.6rem;
+    color: var(--primary-color);
+}
+
+.partner-description {
+    margin: 0 0 1.5rem;
+    color: #666;
+}
+
+.partner-form {
+    display: grid;
+    gap: 1rem;
+}
+
+.form-field {
+    display: grid;
+    gap: 0.35rem;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.form-label {
+    font-weight: 600;
+}
+
+.partner-form input,
+.partner-form textarea {
+    border: 1px solid #d8dee6;
+    border-radius: 10px;
+    padding: 0.75rem 0.9rem;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.partner-form input:focus,
+.partner-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+}
+
+.submit-button {
+    justify-self: start;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #111827;
+    border: none;
+    padding: 0.85rem 1.8rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 8px 18px rgba(17, 24, 39, 0.2);
+}
+
+.submit-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(17, 24, 39, 0.28);
+}
+
 @media (max-width: 600px) {
     .app-title {
         font-size: 2rem;
@@ -157,5 +230,9 @@ body {
 
     .generate-button {
         padding: 0.8rem 2rem;
+    }
+
+    .partner-card {
+        padding: 2rem;
     }
 }
