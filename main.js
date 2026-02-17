@@ -2,6 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const generateButton = document.getElementById('generate-button');
     const numbersContainer = document.getElementById('lotto-numbers-container');
+    const bonusContainer = document.getElementById('bonus-number-container');
 
     generateButton.addEventListener('click', () => {
         generateAndDisplayNumbers();
@@ -9,7 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function generateAndDisplayNumbers() {
         numbersContainer.innerHTML = ''; // Clear previous numbers
-        const numbers = generateLottoNumbers();
+        bonusContainer.innerHTML = '';
+        const { numbers, bonus } = generateLottoNumbers();
 
         numbers.forEach((number, index) => {
             setTimeout(() => {
@@ -17,6 +19,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 numbersContainer.appendChild(circle);
             }, index * 150); // Stagger the animation
         });
+
+        setTimeout(() => {
+            const bonusCircle = createNumberCircle(bonus, 'bonus-circle');
+            bonusContainer.appendChild(bonusCircle);
+        }, numbers.length * 150 + 150);
     }
 
     function generateLottoNumbers() {
@@ -25,12 +32,23 @@ document.addEventListener('DOMContentLoaded', () => {
             const randomNumber = Math.floor(Math.random() * 45) + 1;
             numbers.add(randomNumber);
         }
-        return Array.from(numbers).sort((a, b) => a - b);
+        let bonus = Math.floor(Math.random() * 45) + 1;
+        while (numbers.has(bonus)) {
+            bonus = Math.floor(Math.random() * 45) + 1;
+        }
+
+        return {
+            numbers: Array.from(numbers).sort((a, b) => a - b),
+            bonus,
+        };
     }
 
-    function createNumberCircle(number) {
+    function createNumberCircle(number, extraClass = '') {
         const circle = document.createElement('div');
         circle.classList.add('number-circle');
+        if (extraClass) {
+            circle.classList.add(extraClass);
+        }
         circle.textContent = number;
         
         // Assign color based on number range

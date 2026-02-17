@@ -60,6 +60,29 @@ body {
     flex-wrap: wrap;
 }
 
+.bonus-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    background: #f6f0ff;
+}
+
+.bonus-label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #6a4cc3;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.bonus-number {
+    display: flex;
+    align-items: center;
+}
+
 .number-circle {
     width: 60px;
     height: 60px;
@@ -74,6 +97,11 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: scale(0);
     animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.number-circle.bonus-circle {
+    background-image: linear-gradient(120deg, #ffd369 0%, #ff8b5e 100%);
+    box-shadow: 0 6px 14px rgba(255, 139, 94, 0.35);
 }
 
 @keyframes popIn {
@@ -121,6 +149,10 @@ body {
         width: 50px;
         height: 50px;
         font-size: 1.2rem;
+    }
+
+    .bonus-row {
+        padding: 0.4rem 0.8rem;
     }
 
     .generate-button {
